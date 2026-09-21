@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CredNova | Solicitação de Crédito</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f4f7fb;
+      color: #182433;
+    }
+
+    header {
+      background: #0759c7;
+      color: white;
+      padding: 20px;
+    }
+
+    .topo {
+      max-width: 900px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 27px;
+      font-weight: bold;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #0759c7, #1184e8);
+      color: white;
+      padding: 55px 20px 80px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 34px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      max-width: 650px;
+      margin: auto;
+      font-size: 18px;
+      line-height: 1.5;
+    }
+
+    .card {
+      max-width: 520px;
+      margin: -45px auto 30px;
+      background: white;
+      padding: 28px;
+      border-radius: 16px;
+      box-shadow: 0 8px 30px rgba(0,0,0,.12);
+    }
+
+    .card h2 {
+      text-align: center;
+      margin-bottom: 8px;
+    }
+
+    .sub {
+      text-align: center;
+      color: #667085;
+      margin-bottom: 22px;
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin: 15px 0 7px;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 14px;
+      border: 1px solid #ccd3dd;
+      border-radius: 9px;
+      font-size: 16px;
+    }
+
+    button {
+      width: 100%;
+      border: 0;
+      border-radius: 9px;
+      padding: 16px;
+      margin-top: 22px;
+      background: #13a65a;
+      color: white;
+      font-size: 17px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .aviso {
+      margin-top: 18px;
+      padding: 13px;
+      background: #f5f7fa;
+      border-radius: 8px;
+      color: #596579;
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    .seguranca {
+      max-width: 700px;
+      margin: 30px auto;
+      padding: 0 20px;
+      text-align: center;
+    }
+
+    .seguranca h2 {
+      margin-bottom: 12px;
+    }
+
+    .seguranca p {
+      color: #667085;
+      line-height: 1.6;
+    }
+
+    footer {
+      margin-top: 45px;
+      padding: 25px;
+      background: #101828;
+      color: #d0d5dd;
+      text-align: center;
+      font-size: 13px;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="topo">
+    <div class="logo">CredNova</div>
+    <div>Solicitação de Crédito</div>
+  </div>
+</header>
+
+<section class="hero">
+  <h1>Crédito de forma simples e rápida</h1>
+  <p>
+    Preencha as informações abaixo para iniciar sua solicitação.
+    Após o envio, você poderá continuar o atendimento pelo WhatsApp.
+  </p>
+</section>
+
+<section class="card">
+
+  <h2>Faça sua solicitação</h2>
+  <p class="sub">Leva apenas alguns minutos.</p>
+
+  <form id="formCredito">
+
+    <label for="nome">Nome completo</label>
+    <input id="nome" type="text" required>
+
+    <label for="valor">Valor desejado</label>
+    <select id="valor" required>
+      <option value="">Selecione</option>
+      <option>R$ 500</option>
+      <option>R$ 1.000</option>
+      <option>R$ 2.000</option>
+      <option>R$ 3.000</option>
+      <option>R$ 5.000</option>
+      <option>Acima de R$ 5.000</option>
+    </select>
+
+    <label for="cidade">Cidade</label>
+    <input id="cidade" type="text" required>
+
+<button type="submit">
+  Continuar pelo WhatsApp
+</button>
+
+</form>
+
+<div class="aviso">
+  O envio da solicitação não garante aprovação ou liberação de crédito.
+  As condições dependem da análise aplicável. Nunca envie senha, código
+  de autenticação ou dados completos de cartão.
+</div>
+
+</section>
+
+<section class="seguranca">
+  <h2>Atendimento simples</h2>
+  <p>
+    Envie sua solicitação inicial e continue o atendimento pelo WhatsApp.
+    Antes de contratar qualquer operação de crédito, confira as condições,
+    taxas, prazos e informações da empresa responsável pela oferta.
+  </p>
+</section>
+
+<footer>
+  © 2026 CredNova — Solicitação de Crédito
+</footer>
+
+<script>
+document.getElementById("formCredito").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const nome = document.getElementById("nome").value;
+  const valor = document.getElementById("valor").value;
+  const cidade = document.getElementById("cidade").value;
+
+  const mensagem =
+    "Olá! Gostaria de iniciar uma solicitação de crédito." +
+    "\n\nNome: " + nome +
+    "\nValor desejado: " + valor +
+    "\nCidade: " + cidade;
+
+  const whatsapp =
+    "https://wa.me/5511965019854?text=" +
+    encodeURIComponent(mensagem);
+
+  window.location.href = whatsapp;
+});
+</script>
+</body>
+</html>
