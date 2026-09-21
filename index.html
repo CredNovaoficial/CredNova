@@ -166,6 +166,11 @@
 
     <label for="nome">Nome completo</label>
     <input id="nome" type="text" required>
+    <label for="cpf">CPF</label>
+<input id="cpf" type="text" inputmode="numeric" maxlength="14" required>
+
+<label for="nascimento">Data de nascimento</label>
+<input id="nascimento" type="date" required>
 
     <label for="valor">Valor desejado</label>
     <select id="valor" required>
@@ -213,12 +218,17 @@ document.getElementById("formCredito").addEventListener("submit", function(e) {
   e.preventDefault();
 
   const nome = document.getElementById("nome").value;
+const cpf = document.getElementById("cpf").value;
+const nascimento = document.getElementById("nascimento").value;
+  
   const valor = document.getElementById("valor").value;
   const cidade = document.getElementById("cidade").value;
 
   const mensagem =
     "Olá! Gostaria de iniciar uma solicitação de crédito." +
     "\n\nNome: " + nome +
+    "\nCPF: " + cpf +
+"\nData de nascimento: " + nascimento +
     "\nValor desejado: " + valor +
     "\nCidade: " + cidade;
 
