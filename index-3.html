@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CredNova | Solicitação de Crédito</title>
+<meta name="description" content="Solicite uma análise de crédito online de forma simples. Solicitações sujeitas à análise e às condições aplicáveis.">
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:#f4f7fb;color:#172033}
+header{background:#0759c7;color:white;padding:18px 20px}.top{max-width:1050px;margin:auto;display:flex;align-items:center;justify-content:space-between}.logo{font-size:25px;font-weight:800}.badge{font-size:12px;background:#ffffff22;padding:8px 10px;border-radius:20px}
+.hero{background:linear-gradient(135deg,#0759c7,#0b77e3);color:white;padding:48px 20px}.hero-in{max-width:1050px;margin:auto}.hero h1{font-size:34px;line-height:1.08;margin:0 0 14px;max-width:650px}.hero p{font-size:17px;line-height:1.55;max-width:650px;margin:0 0 24px}.btn{display:inline-block;background:#19a463;color:white;text-decoration:none;padding:15px 20px;border-radius:10px;font-weight:700}
+main{max-width:1050px;margin:auto;padding:30px 20px}.title{text-align:center;margin:8px 0 25px}.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.card{background:white;border-radius:14px;padding:22px;box-shadow:0 5px 18px #10204012}.num{width:36px;height:36px;border-radius:50%;background:#e8f1ff;color:#0759c7;display:grid;place-items:center;font-weight:800}.card h3{margin:14px 0 8px}.card p{color:#586579;line-height:1.5;margin:0}
+.formbox{margin-top:28px;background:white;border-radius:16px;padding:25px;box-shadow:0 5px 18px #10204012}.formbox h2{margin-top:0}.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}label{font-size:13px;font-weight:700}input,select{width:100%;padding:13px;border:1px solid #ccd5e1;border-radius:9px;margin-top:6px;font-size:16px}.full{grid-column:1/-1}.send{border:0;width:100%;margin-top:18px;background:#0759c7;color:white;padding:15px;border-radius:10px;font-size:16px;font-weight:800}.note{font-size:12px;color:#667085;line-height:1.5;margin-top:12px}
+.info{margin-top:28px;padding:22px;background:#eaf3ff;border-radius:14px}.info h2{margin-top:0}.info p{line-height:1.55;color:#40516a}
+footer{text-align:center;padding:28px 20px;color:#6b7280;font-size:12px}
+@media(max-width:650px){.hero{padding:38px 18px}.hero h1{font-size:29px}.steps,.grid{grid-template-columns:1fr}.full{grid-column:auto}.badge{display:none}}
+</style>
+</head>
+<body>
+<header><div class="top"><div class="logo">CredNova</div><div class="badge">Solicitação de crédito online</div></div></header>
+<section class="hero"><div class="hero-in"><h1>Crédito de forma simples, clara e digital</h1><p>Preencha sua solicitação para iniciar uma análise. Você poderá continuar o atendimento pelo WhatsApp.</p><a class="btn" href="#solicitar">Solicitar análise</a></div></section>
+<main>
+<h2 class="title">Como funciona</h2>
+<div class="steps">
+<div class="card"><div class="num">1</div><h3>Faça sua solicitação</h3><p>Informe os dados necessários para iniciar o atendimento.</p></div>
+<div class="card"><div class="num">2</div><h3>Análise</h3><p>As informações enviadas são utilizadas para avaliar a solicitação.</p></div>
+<div class="card"><div class="num">3</div><h3>Atendimento</h3><p>Continue pelo WhatsApp para receber informações sobre o andamento e as condições disponíveis.</p></div>
+</div>
+
+<section class="formbox" id="solicitar">
+<h2>Solicite uma análise</h2>
+<form id="creditoForm">
+<div class="grid">
+<div><label>Nome completo<input id="nome" required autocomplete="name"></label></div>
+<div><label>CPF<input id="cpf" inputmode="numeric" placeholder="000.000.000-00" required></label></div>
+<div><label>Data de nascimento<input id="nascimento" type="date" required></label></div>
+<div><label>Valor desejado<select id="valor" required><option value="">Selecione</option><option>R$ 500</option><option>R$ 1.000</option><option>R$ 1.500</option><option>R$ 2.000</option><option>R$ 3.000</option><option>R$ 5.000</option></select></label></div>
+<div><label>Situação profissional<select id="situacao" required><option value="">Selecione</option><option>CLT / carteira assinada</option><option>Aposentado(a)</option><option>Pensionista</option><option>Servidor(a) público(a)</option><option>Autônomo(a)</option><option>MEI / empresário(a)</option><option>Desempregado(a)</option><option>Outro</option></select></label></div>
+<div><label>Renda mensal<input id="renda" inputmode="decimal" placeholder="Ex.: R$ 2.500,00" required></label></div>
+<div><label>Dia do recebimento<input id="diaRecebimento" type="number" inputmode="numeric" min="1" max="31" placeholder="Ex.: 5" required></label></div>
+<div class="full"><label>Telefone / WhatsApp<input id="telefone" type="tel" inputmode="tel" required></label></div>
+</div>
+<button class="send" type="submit">Continuar pelo WhatsApp</button>
+<p class="note">O envio da solicitação não representa aprovação ou garantia de liberação de crédito. Condições, custos, prazos e eventual aprovação devem ser informados de forma clara antes de qualquer contratação. Evite enviar senhas, códigos de autenticação ou dados de acesso bancário.</p>
+</form>
+</section>
+
+<section class="info"><h2>Transparência e segurança</h2><p>A CredNova recebe solicitações para análise e atendimento. Antes de contratar qualquer operação, confirme o valor total, número e valor das parcelas, juros, demais custos e condições aplicáveis. Nunca compartilhe sua senha bancária ou código de segurança.</p></section>
+</main>
+<footer>© 2026 CredNova • Solicitações sujeitas à análise e às condições aplicáveis.</footer>
+<script>
+document.getElementById('creditoForm').addEventListener('submit',function(e){
+ e.preventDefault();
+ const nome=document.getElementById('nome').value;
+ const cpf=document.getElementById('cpf').value;
+ const nasc=document.getElementById('nascimento').value;
+ const valor=document.getElementById('valor').value;
+ const situacao=document.getElementById('situacao').value;
+ const renda=document.getElementById('renda').value;
+ const dia=document.getElementById('diaRecebimento').value;
+ const tel=document.getElementById('telefone').value;
+ const msg=`Olá! Quero solicitar uma análise de crédito pela CredNova.%0A%0ANome: ${encodeURIComponent(nome)}%0ACPF: ${encodeURIComponent(cpf)}%0AData de nascimento: ${encodeURIComponent(nasc)}%0AValor desejado: ${encodeURIComponent(valor)}%0ASituação profissional: ${encodeURIComponent(situacao)}%0ARenda mensal: ${encodeURIComponent(renda)}%0ADia do recebimento: ${encodeURIComponent(dia)}%0ATelefone: ${encodeURIComponent(tel)}`;
+ window.location.href=`https://wa.me/5511965019854?text=${msg}`;
+});
+</script>
+</body>
+</html>
